@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Reloj: El Tiempo de la Tierra</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <!-- ✅ VINCULACIÓN DEL CSS -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ================= SECCIÓN 1 ================= -->
+<section id="inicio">
+    <div class="content-wrapper">
+        <h1>Eco-Reloj</h1>
+        <h2>El Tiempo de la Tierra</h2>
+        <p>Nuestro estilo de vida actual consume recursos más rápido de lo que el planeta puede reponerlos. Es hora de mirar el reloj.</p>
+        <a href="#balanza" class="scroll-down">▼</a>
+    </div>
+</section>
+
+<!-- ================= SECCIÓN 2 ================= -->
+<section id="balanza">
+    <div class="content-wrapper">
+        <h2>La Balanza Ecológica</h2>
+        <p>La <strong>Biocapacidad</strong> se inclina ante nuestra <strong>Huella Ecológica</strong>.</p>
+
+        <div class="grafico-balanza">
+            <div class="barra oferta">
+                Oferta
+                <span class="etiqueta">Biocapacidad</span>
+            </div>
+            <div class="barra demanda">
+                Demanda
+                <span class="etiqueta">Huella</span>
+            </div>
+        </div>
+
+        <a href="#mapa" class="scroll-down">▼</a>
+    </div>
+</section>
+
+<!-- ================= SECCIÓN 3 ================= -->
+<section id="mapa">
+    <div class="content-wrapper">
+        <h2>El Mapa de la Deuda</h2>
+
+        <div class="mapa-container">
+            <div id="pin-canada" class="pin" style="top:25%; left:22%; background-color:var(--primary);"></div>
+            <div id="pin-brasil" class="pin" style="top:65%; left:30%; background-color:var(--primary);"></div>
+            <div id="pin-espana" class="pin" style="top:33%; left:48%; background-color:var(--danger);"></div>
+            <div id="pin-qatar" class="pin" style="top:42%; left:58%; background-color:#c0392b;"></div>
+        </div>
+
+        <div id="info-pais">Pasa el ratón por los puntos del mapa...</div>
+        <a href="#espejo" class="scroll-down">▼</a>
+    </div>
+</section>
+
+<!-- ================= SECCIÓN 4 ================= -->
+<section id="espejo">
+    <div class="content-wrapper">
+        <h2>Tu Espejo Eco</h2>
+
+        <div class="cuestionario">
+
+            <div id="pregunta-1" class="pregunta active">
+                <strong>1. ¿Consumes productos de origen animal?</strong>
+                <label><input type="radio" name="q1" value="1.2"> Siempre</label>
+                <label><input type="radio" name="q1" value="0.7"> Diario</label>
+                <label><input type="radio" name="q1" value="0.2"> Raramente</label>
+            </div>
+
+            <div id="pregunta-2" class="pregunta">
+                <strong>2. Transporte principal</strong>
+                <label><input type="radio" name="q2" value="1.0"> Coche</label>
+                <label><input type="radio" name="q2" value="0.4"> Público</label>
+                <label><input type="radio" name="q2" value="0.1"> Bici/Pie</label>
+            </div>
+
+            <div class="navegacion-cuestionario">
+                <button id="btn-anterior" class="nav-btn">Anterior</button>
+                <button id="btn-siguiente" class="nav-btn">Siguiente</button>
+            </div>
+
+            <div id="calculo-container" style="display:none;">
+                <button id="btn-calcular" class="action-btn">Calcular</button>
+                <div id="resultado-planetas"></div>
+            </div>
+
+        </div>
+
+        <a href="#acciones" class="scroll-down">▼</a>
+    </div>
+</section>
+
+<!-- ================= SECCIÓN 5 ================= -->
+<section id="acciones">
+    <div class="content-wrapper">
+        <h2>El Impacto: Tu Turno</h2>
+
+        <button id="btn-ver-reto" class="action-btn" style="max-width:300px;background-color:var(--primary);color:white;">
+            Ver Reto Semanal
+        </button>
+
+        <div id="lista-retos">
+            <div class="reto-card">
+                <h3>🚗 Operación Coche Compartido</h3>
+                <p>No viajes solo.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JS -->
+<script src="index.js"></script>
+
+</body>
+</html>

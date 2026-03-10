@@ -1,4 +1,4 @@
- document.addEventListener('DOMContentLoaded', function() {
+     document.addEventListener('DOMContentLoaded', function() {
 
         // --- Lógica para el desplazamiento suave con las flechas ---
         document.querySelectorAll('a.scroll-down').forEach(anchor => {

@@ -13,111 +13,224 @@
 </head>
 <body>
 
-<!-- ================= SECCIÓN 1 ================= -->
-<section id="inicio">
-    <div class="content-wrapper">
-        <h1>Eco-Reloj</h1>
-        <h2>El Tiempo de la Tierra</h2>
-        <p>Nuestro estilo de vida actual consume recursos más rápido de lo que el planeta puede reponerlos. Es hora de mirar el reloj.</p>
-        <a href="#balanza" class="scroll-down">▼</a>
-    </div>
-</section>
+    <!-- 1. Concepto y Objetivo -->
+    <section id="inicio">
+        <div class="content-wrapper">
+            <h1>Eco-Reloj</h1>
+            <h2>El Tiempo de la Tierra</h2>
+            <p>Nuestro estilo de vida actual consume recursos más rápido de lo que el planeta puede reponerlos. Es hora de mirar el reloj.</p>
+            <a href="#balanza" class="scroll-down">▼</a>
+        </div>
+    </section>
 
-<!-- ================= SECCIÓN 2 ================= -->
-<section id="balanza">
-    <div class="content-wrapper">
-        <h2>La Balanza Ecológica</h2>
-        <p>La <strong>Biocapacidad</strong> se inclina ante nuestra <strong>Huella Ecológica</strong>.</p>
-
-        <div class="grafico-balanza">
-            <div class="barra oferta">
-                Oferta
-                <span class="etiqueta">Biocapacidad</span>
+    <!-- 2. La Balanza (Biocapacidad vs Huella) -->
+    <section id="balanza">
+        <div class="content-wrapper">
+            <h2>La Balanza Ecológica</h2>
+            <p>La <strong>Biocapacidad</strong> (oferta de la naturaleza) se inclina peligrosamente ante nuestra <strong>Huella Ecológica</strong> (demanda).</p>
+            
+            <div class="grafico-balanza">
+                <div class="barra oferta">
+                    Oferta
+                    <span class="etiqueta">Biocapacidad<br><small>(Bosques, Pesca)</small></span>
+                </div>
+                <div class="barra demanda">
+                    Demanda
+                    <span class="etiqueta">Huella<br><small>(Carbono, Residuos)</small></span>
+                </div>
             </div>
-            <div class="barra demanda">
-                Demanda
-                <span class="etiqueta">Huella</span>
+            <p style="margin-top: 60px; font-weight: 600; color: var(--danger); letter-spacing: 1px;">"ESTAMOS GASTANDO LOS AHORROS DE LA NATURALEZA"</p>
+            <a href="#mapa" class="scroll-down">▼</a>
+        </div>
+    </section>
+
+    <!-- 3. El Mapa de la Deuda -->
+    <section id="mapa">
+        <div class="content-wrapper">
+            <h2>El Mapa de la Deuda</h2>
+            <p>Haz clic en un país para ver si tiene superávit o déficit ecológico.</p>
+            
+            <div class="mapa-container">
+                <!-- Coordenadas aproximadas en % para el mapa SVG -->
+                <div id="pin-canada" class="pin" style="top: 25%; left: 22%; background-color: var(--primary);"></div>
+                <div id="pin-brasil" class="pin" style="top: 65%; left: 30%; background-color: var(--primary);"></div>
+                <div id="pin-espana" class="pin" style="top: 33%; left: 48%; background-color: var(--danger);"></div>
+                <div id="pin-qatar" class="pin" style="top: 42%; left: 58%; background-color: #c0392b;"></div>
+            </div>
+
+            <div id="info-pais">Selecciona un país...</div>
+            <a href="#espejo" class="scroll-down">▼</a>
+        </div>
+    </section>
+
+    <!-- 4. Tu Espejo Eco (Simulador) -->
+    <section id="espejo">
+        <div class="content-wrapper">
+            <h2>Tu Espejo Eco</h2>
+            <p>Responde con sinceridad. Cada respuesta revelará la siguiente pregunta.</p>
+            
+            <div class="cuestionario">
+                <!-- Pregunta 1 -->
+                <div id="pregunta-1" class="pregunta active">
+                    <strong>1. ¿Con qué frecuencia consumes productos de origen animal (carne, pescado, lácteos)?</strong>
+                    <label><input type="radio" name="q1" value="1.2"> Casi en cada comida</label>
+                    <label><input type="radio" name="q1" value="0.7"> Diariamente</label>
+                    <label><input type="radio" name="q1" value="0.2"> Raramente o nunca</label>
+                </div>
+
+                <!-- Pregunta 2 -->
+                <div id="pregunta-2" class="pregunta">
+                    <strong>2. ¿Cuál es tu principal medio de transporte diario?</strong>
+                    <label><input type="radio" name="q2" value="1.0"> Coche (gasolina/diésel) solo</label>
+                    <label><input type="radio" name="q2" value="0.4"> Transporte público o coche compartido</label>
+                    <label><input type="radio" name="q2" value="0.1"> Bici, a pie o coche eléctrico</label>
+                </div>
+
+                <!-- Pregunta 3 -->
+                <div id="pregunta-3" class="pregunta">
+                    <strong>3. ¿Cómo es el consumo energético de tu hogar?</strong>
+                    <label><input type="radio" name="q3" value="0.8"> No presto atención, uso energía convencional</label>
+                    <label><input type="radio" name="q3" value="0.4"> Uso bombillas LED y apago luces</label>
+                    <label><input type="radio" name="q3" value="0.1"> Tengo electrodomésticos A+++ y/o energía renovable</label>
+                </div>
+
+                <!-- Pregunta 4 -->
+                <div id="pregunta-4" class="pregunta">
+                    <strong>4. Al comprar alimentos, ¿priorizas productos locales y de temporada?</strong>
+                    <label><input type="radio" name="q4" value="0.6"> No, compro lo que me apetece</label>
+                    <label><input type="radio" name="q4" value="0.3"> A veces, si es fácil encontrarlos</label>
+                    <label><input type="radio" name="q4" value="0.1"> Sí, busco activamente productos de cercanía</label>
+                </div>
+
+                <!-- Pregunta 5 -->
+                <div id="pregunta-5" class="pregunta">
+                    <strong>5. ¿Cómo gestionas tus residuos domésticos?</strong>
+                    <label><input type="radio" name="q5" value="0.5"> No separo los residuos</label>
+                    <label><input type="radio" name="q5" value="0.2"> Separo lo básico (plástico, papel, vidrio)</label>
+                    <label><input type="radio" name="q5" value="0.0"> Separo, composteo y reduzco al máximo</label>
+                </div>
+
+                <!-- Pregunta 6 -->
+                <div id="pregunta-6" class="pregunta">
+                    <strong>6. ¿Con qué frecuencia viajas en avión al año?</strong>
+                    <label><input type="radio" name="q6" value="1.5"> Varios viajes largos (intercontinentales)</label>
+                    <label><input type="radio" name="q6" value="0.8"> Varios viajes cortos (nacionales/europeos)</label>
+                    <label><input type="radio" name="q6" value="0.1"> No suelo viajar en avión</label>
+                </div>
+
+                <!-- Pregunta 7 -->
+                <div id="pregunta-7" class="pregunta">
+                    <strong>7. ¿Con qué frecuencia compras artículos nuevos (ropa, electrónica, etc.)?</strong>
+                    <label><input type="radio" name="q7" value="0.7"> Constantemente, me gusta estar a la última</label>
+                    <label><input type="radio" name="q7" value="0.3"> Solo cuando algo se rompe o es necesario</label>
+                    <label><input type="radio" name="q7" value="0.1"> Raramente, priorizo reparar o comprar de segunda mano</label>
+                </div>
+
+                <!-- Pregunta 8 -->
+                <div id="pregunta-8" class="pregunta">
+                    <strong>8. ¿En qué tipo de vivienda vives?</strong>
+                    <label><input type="radio" name="q8" value="0.8"> Casa grande unifamiliar</label>
+                    <label><input type="radio" name="q8" value="0.4"> Casa adosada o piso grande (>100m²)</label>
+                    <label><input type="radio" name="q8" value="0.2"> Piso pequeño o apartamento (<100m²)</label>
+                </div>
+
+                <!-- Pregunta 9 -->
+                <div id="pregunta-9" class="pregunta">
+                    <strong>9. ¿Cuánta atención prestas a tu consumo de agua?</strong>
+                    <label><input type="radio" name="q9" value="0.4"> No me fijo mucho, dejo el grifo correr</label>
+                    <label><input type="radio" name="q9" value="0.2"> Intento cerrar el grifo y hacer duchas cortas</label>
+                    <label><input type="radio" name="q9" value="0.1"> Reutilizo agua y tengo sistemas de ahorro</label>
+                </div>
+
+                <!-- Pregunta 10 -->
+                <div id="pregunta-10" class="pregunta">
+                    <strong>10. ¿Qué porcentaje de la comida que compras crees que acabas tirando?</strong>
+                    <label><input type="radio" name="q10" value="0.6"> Bastante, más del 20%</label>
+                    <label><input type="radio" name="q10" value="0.3"> Algo, a veces se me estropean cosas (5-20%)</label>
+                    <label><input type="radio" name="q10" value="0.1"> Muy poco o nada, planifico bien mis compras (<5%)</label>
+                </div>
+
+                <!-- Pregunta 11 -->
+                <div id="pregunta-11" class="pregunta">
+                    <strong>11. ¿Cuál es el tamaño de tu hogar (cuántas personas viven contigo)?</strong>
+                    <label><input type="radio" name="q11" value="0.2"> Vivo con 3 o más personas (recursos compartidos)</label>
+                    <label><input type="radio" name="q11" value="0.4"> Vivo con 1 o 2 personas</label>
+                    <label><input type="radio" name="q11" value="0.7"> Vivo solo/a</label>
+                </div>
+
+                <!-- Pregunta 12 -->
+                <div id="pregunta-12" class="pregunta">
+                    <strong>12. ¿Con qué frecuencia consumes alimentos procesados y envasados?</strong>
+                    <label><input type="radio" name="q12" value="0.5"> A diario, son la base de mi dieta</label>
+                    <label><input type="radio" name="q12" value="0.2"> Varias veces por semana</label>
+                    <label><input type="radio" name="q12" value="0.1"> Raramente, cocino con ingredientes frescos</label>
+                </div>
+
+                <!-- Pregunta 13 -->
+                <div id="pregunta-13" class="pregunta">
+                    <strong>13. Si tienes vehículo, ¿qué tipo de combustible usa?</strong>
+                    <label><input type="radio" name="q13" value="0.8"> Diésel o gasolina antiguo</label>
+                    <label><input type="radio" name="q13" value="0.3"> Híbrido o gasolina moderno y eficiente</label>
+                    <label><input type="radio" name="q13" value="0.0"> Eléctrico o no tengo vehículo</label>
+                </div>
+
+                <!-- Pregunta 14 -->
+                <div id="pregunta-14" class="pregunta">
+                    <strong>14. ¿Cómo climatizas tu hogar principalmente?</strong>
+                    <label><input type="radio" name="q14" value="0.7"> Calefacción/aire acondicionado sin control</label>
+                    <label><input type="radio" name="q14" value="0.4"> Uso la climatización con termostato de forma moderada</label>
+                    <label><input type="radio" name="q14" value="0.1"> Buen aislamiento, uso mínimo de climatización</label>
+                </div>
+
+                <!-- Pregunta 15 -->
+                <div id="pregunta-15" class="pregunta">
+                    <strong>15. ¿Tu banco o tus ahorros invierten en energías renovables?</strong>
+                    <label><input type="radio" name="q15" value="0.3"> No lo sé o sé que no</label>
+                    <label><input type="radio" name="q15" value="0.1"> Intento que mi dinero apoye proyectos sostenibles</label>
+                    <label><input type="radio" name="q15" value="0.0"> Sí, invierto activamente en banca ética o proyectos verdes</label>
+                </div>
+
+                <div class="navegacion-cuestionario">
+                    <button id="btn-anterior" class="nav-btn">Anterior</button>
+                    <button id="btn-siguiente" class="nav-btn">Siguiente</button>
+                </div>
+
+                <div id="calculo-container" style="display: none; opacity: 0; transition: opacity 0.8s ease-in;">
+                    <button id="btn-calcular" class="action-btn">Calcular mis planetas</button>
+                    <div id="resultado-planetas"></div>
+                </div>
+            </div>
+            <a href="#acciones" class="scroll-down">▼</a>
+        </div>
+    </section>
+
+    <!-- 5. Acciones Concretas -->
+    <section id="acciones">
+        <div class="content-wrapper">
+            <h2>El Impacto: Tu Turno</h2>
+            <p>No basta con saberlo, hay que actuar. Acepta el desafío.</p>
+            
+            <button id="btn-ver-reto" class="action-btn" style="max-width: 300px; background-color: var(--primary); color: white;">Ver Reto Semanal</button>
+
+            <div id="lista-retos">
+                <div class="reto-card">
+                    <h3>🚗 Operación Coche Compartido</h3>
+                    <p>No viajes solo. Evita "pagar" el coste de 4 asientos usando solo uno.</p>
+                </div>
+                <div class="reto-card">
+                    <h3>🥦 Lunes sin Carne</h3>
+                    <p>Reduce el impacto del sector alimentario eliminando la carne un día a la semana.</p>
+                </div>
+                <div class="reto-card">
+                    <h3>♻️ Estación de Reciclaje</h3>
+                    <p>Instala tres cubos en casa hoy mismo para reducir tu huella de residuos.</p>
+                </div>
             </div>
         </div>
-
-        <a href="#mapa" class="scroll-down">▼</a>
-    </div>
-</section>
-
-<!-- ================= SECCIÓN 3 ================= -->
-<section id="mapa">
-    <div class="content-wrapper">
-        <h2>El Mapa de la Deuda</h2>
-
-        <div class="mapa-container">
-            <div id="pin-canada" class="pin" style="top:25%; left:22%; background-color:var(--primary);"></div>
-            <div id="pin-brasil" class="pin" style="top:65%; left:30%; background-color:var(--primary);"></div>
-            <div id="pin-espana" class="pin" style="top:33%; left:48%; background-color:var(--danger);"></div>
-            <div id="pin-qatar" class="pin" style="top:42%; left:58%; background-color:#c0392b;"></div>
-        </div>
-
-        <div id="info-pais">Pasa el ratón por los puntos del mapa...</div>
-        <a href="#espejo" class="scroll-down">▼</a>
-    </div>
-</section>
-
-<!-- ================= SECCIÓN 4 ================= -->
-<section id="espejo">
-    <div class="content-wrapper">
-        <h2>Tu Espejo Eco</h2>
-
-        <div class="cuestionario">
-
-            <div id="pregunta-1" class="pregunta active">
-                <strong>1. ¿Consumes productos de origen animal?</strong>
-                <label><input type="radio" name="q1" value="1.2"> Siempre</label>
-                <label><input type="radio" name="q1" value="0.7"> Diario</label>
-                <label><input type="radio" name="q1" value="0.2"> Raramente</label>
-            </div>
-
-            <div id="pregunta-2" class="pregunta">
-                <strong>2. Transporte principal</strong>
-                <label><input type="radio" name="q2" value="1.0"> Coche</label>
-                <label><input type="radio" name="q2" value="0.4"> Público</label>
-                <label><input type="radio" name="q2" value="0.1"> Bici/Pie</label>
-            </div>
-
-            <div class="navegacion-cuestionario">
-                <button id="btn-anterior" class="nav-btn">Anterior</button>
-                <button id="btn-siguiente" class="nav-btn">Siguiente</button>
-            </div>
-
-            <div id="calculo-container" style="display:none;">
-                <button id="btn-calcular" class="action-btn">Calcular</button>
-                <div id="resultado-planetas"></div>
-            </div>
-
-        </div>
-
-        <a href="#acciones" class="scroll-down">▼</a>
-    </div>
-</section>
-
-<!-- ================= SECCIÓN 5 ================= -->
-<section id="acciones">
-    <div class="content-wrapper">
-        <h2>El Impacto: Tu Turno</h2>
-
-        <button id="btn-ver-reto" class="action-btn" style="max-width:300px;background-color:var(--primary);color:white;">
-            Ver Reto Semanal
-        </button>
-
-        <div id="lista-retos">
-            <div class="reto-card">
-                <h3>🚗 Operación Coche Compartido</h3>
-                <p>No viajes solo.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
+    </section>
 <!-- JS -->
 <script src="index.js"></script>
 
 </body>
+
 </html>

@@ -1,7 +1,7 @@
 :root {
-            --primary: #4cd137; /* Verde vibrante pero elegante */
-            --danger: #e84118;  /* Rojo quemado */
-            --text: #f5f6fa;    /* Blanco suave */
+            --primary: #4cd137;
+            --danger: #e84118;
+            --text: #f5f6fa;
             --glass: rgba(255, 255, 255, 0.1);
             --glass-border: rgba(255, 255, 255, 0.2);
         }
@@ -40,8 +40,8 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: rgba(0, 0, 0, 0.65); /* Oscurecer */
-            backdrop-filter: blur(4px);      /* Difuminar */
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(4px);
             z-index: 1;
         }
 
@@ -145,7 +145,7 @@
         
         .etiqueta { 
             position: absolute; 
-            bottom: -80px; /* Bajamos la etiqueta */
+            bottom: -80px; 
             color: white; 
             width: 150px; 
             font-size: 0.9rem;
@@ -172,9 +172,9 @@
             filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
         }
 
-        /* Hacemos el fondo del espejo un poco más claro para que se vea la imagen */
+        
         #espejo::before {
-            background: rgba(0, 0, 0, 0.35); /* Aclarado para mejorar visibilidad del fondo */
+            background: rgba(0, 0, 0, 0.35);
             backdrop-filter: blur(2px);
         }
 

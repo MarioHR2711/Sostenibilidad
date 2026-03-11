@@ -122,7 +122,9 @@
                     planetas += parseFloat(respuesta.value);
                 }
             }
-
+            if (planetas<0.5) {
+                 planetas=0.5
+            }
             resultadoDiv.innerHTML = `Necesitaríamos <span style="font-size: 3rem; color: var(--danger);">${planetas.toFixed(1)}</span> Tierras si todos vivieran como tú.`;
         }
         btnCalcular.addEventListener('click', calcularHuella);
@@ -147,3 +149,4 @@
 
         document.querySelectorAll('.grafico-balanza').forEach(el => observer.observe(el));
     });
+
